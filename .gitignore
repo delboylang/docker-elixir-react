@@ -1,0 +1,6 @@
+/MysqlHome
+/Mysql
+/public/node_modules
+/public/yarn.lock
+/public/log/project_access.log
+/public/log/project_error.log

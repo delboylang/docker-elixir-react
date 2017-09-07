@@ -1,6 +1,6 @@
 FROM php:7-apache
 RUN    apt-get update \
-&& apt-get install -y     libxml2-dev  libfreetype6-dev libjpeg62-turbo-dev libmcrypt-dev libpng12-dev libtidy-dev zziplib-bin msmtp \
+&& apt-get install -y     libxml2-dev  libfreetype6-dev libjpeg62-turbo-dev libmcrypt-dev libpng12-dev libtidy-dev zziplib-bin msmtp vim\
 && a2enmod rewrite \
 && a2enmod ssl \
 && docker-php-ext-install mysqli pdo_mysql iconv mcrypt zip  soap  \
