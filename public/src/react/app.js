@@ -1,1 +1,1 @@
-import App from './component/route.js';
+import MainApp from './components/route.js';

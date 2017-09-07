@@ -1,8 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom';
-import CSSModules from 'react-css-modules';
-import styles from './button/test.css';
-//test
+
 import {
     BrowserRouter as Router,
     Route,
@@ -17,7 +15,7 @@ const Home = () => (
 
 const About = () => (
     <div>
-        <h2 className={styles.random} >About</h2>
+        <h2 >About</h2>
     </div>
 )
 
@@ -55,10 +53,10 @@ const Topics = ({ match }) => (
     </div>
 )
 
-const BasicExample = () => (
+const MainApp = () => (
     <Router>
         <div>
-            <ul className={styles.red}>
+            <ul>
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/about">About</Link></li>
                 <li><Link to="/topics">Topics</Link></li>
@@ -67,14 +65,14 @@ const BasicExample = () => (
             <hr/>
 
             <Route exact path="/" component={Home}/>
-            <Route path="/about" component={About}/>
+            <Route path="/about" component={About}/> 
             <Route path="/topics" component={Topics}/>
         </div>
     </Router>
 )
-export default BasicExample
+export default MainApp;
 
 
-if (document.getElementById('form')) {
-    ReactDOM.render(<BasicExample />, document.getElementById('form'));
+if (document.getElementById('root')) {
+    ReactDOM.render(<MainApp />, document.getElementById('root'));
 }
